@@ -14,7 +14,7 @@ export const Recipe = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recipes");
+        const response = await axios.get("https://mern-recipe-app-uz2k.onrender.com/recipes");
         setRecipes(response.data);
       } catch (err) {
         console.log(err);
@@ -24,7 +24,7 @@ export const Recipe = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedRecipes/ids/${userID}`
+          `https://mern-recipe-app-uz2k.onrender.com/recipes/savedRecipes/ids/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
